@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/activiti_test?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
+  activiti:
+    database-schema-update: true
+    check-process-definitions: false
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    content-type: text/html
+
+mybatis:
+  mapper-locations: classpath*:mappers/*.xml
+  type-aliases-package: com.summer.activiti.dao.entity
+server:
+  port: 9090
